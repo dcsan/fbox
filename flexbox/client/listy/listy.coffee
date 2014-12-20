@@ -2,8 +2,17 @@ Template.listy.helpers
   'items': ->
 
     items = []
-    for idx in [1..30]
-      items.push({name: "item #{idx}"})
+    numItems = 30
+    for idx in [1..numItems]
+      hue = (idx * 360 / numItems)
+      colr = "hsl(#{hue}, 100%, 50%)"
+      style="background-color:#{colr}"
+      items.push({
+        name: "item #{idx}"
+        idx: idx
+        colr: colr
+        style: style
+      })
 
     console.log items
     return items

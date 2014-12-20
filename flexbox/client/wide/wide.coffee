@@ -19,28 +19,33 @@ addScroller = (famx) ->
   scrollview.sequenceFrom surfaces
   i = 0
   temp = undefined
+  mouseSync = new famous.inputs.MouseSync({direction:0})
 
   while i < 40
     temp = new famous.core.Surface(
       content: "Surface: " + (i + 1)
-      size: [ famx.size.sx, 200 ]
+      size: famx.size
+      classes: ["cbox"]
       properties:
         backgroundColor: "hsl(" + (i * 360 / 40) + ", 100%, 50%)"
         lineHeight: "200px"
         textAlign: "center"
     )
     temp.pipe scrollview
+    temp.pipe(mouseSync)
     surfaces.push temp
     i++
 
+  mouseSync.pipe(scrollview)
+
+  # positioning blah blah verbose stuffy api
   stateModifier = new famous.modifiers.StateModifier({
-    transform: famous.core.Transform.translate(5, 100, 0)
+    transform: famous.core.Transform.translate(famx.pos[0], famx.pos[1], 0)
   })
 
   famx.mainContext.add(stateModifier).add(scrollview)
 
-  ##TODO WTF famous use tedious API to
-  # positioning blah blah verbose stuffy api
+
   # mouseSync so it can respond to input. hello
   ## cant add a scrollView to a renderController, WTF
   # famx.rc.add scrollview
@@ -61,15 +66,21 @@ initEngine = (tgtDiv) ->
     origin: [.5, .5 ]
   )).add renderController
 
-  size = {
-    sx: $(tgtDiv).width()
-    sy: $(tgtDiv).height()
-  }
+  size = [
+    $(tgtDiv).width(), $(tgtDiv).height()
+  ]
+
+  #FIXME - need to handle resize events
+  pos = [
+    $(tgtDiv).position().left,
+    $(tgtDiv).position().top,
+  ]
 
   return {
     mainContext: mainContext
     rc: renderController
     size: size
+    pos: pos
   }
 
 
@@ -94,6 +105,7 @@ addBoxes = (famx) ->
         backgroundColor: colr
         lineHeight: "200px"
         textAlign: "center"
+        classes: "cbox"
     )
     i++
   famx.rc.show surfaces[0]

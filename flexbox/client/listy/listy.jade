@@ -1,5 +1,11 @@
 template(name='listy')
 
+  h1 basic list view
+  p this is to check famous hasn't broken html scrolling
+
   each items
-    .entry
-      this.name
+    .entry(style=style)
+      p {{this.name}}
+      .number {{this.idx}}
+
+  +footer

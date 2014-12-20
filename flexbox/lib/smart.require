@@ -11,5 +11,8 @@
 	},
 	"famous-polyfills": {
 		"alias": "famous.polyfills"
-	}
+	},
+  "jquery": {
+    "alias": "$"
+  }
 }
