@@ -24,3 +24,6 @@ Meteor.startup ->
 
   Router.route "/flex1", ->
     @render "flex1"
+
+  Router.route "/blocky", ->
+    @render "blocky"

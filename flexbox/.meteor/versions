@@ -8,6 +8,7 @@ boilerplate-generator@1.0.2
 callback-hook@1.0.2
 check@1.0.3
 coffeescript@1.0.5
+dcsan:slick@1.3.11_1
 ddp@1.0.13
 deps@1.0.6
 ejson@1.0.5
@@ -40,7 +41,6 @@ mongo@1.0.10
 mquandalle:jade@0.4.1
 observe-sequence@1.0.4
 ordered-dict@1.0.2
-raix:famono@0.9.23
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4

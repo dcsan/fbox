@@ -5,6 +5,7 @@ Template.top.helpers
       { name: 'listy'}
       { name: 'wide'}
       { name: 'flex1'}
+      { name: 'blocky'}
     ]
 
     for item in obj

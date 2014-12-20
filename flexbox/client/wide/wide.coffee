@@ -7,7 +7,7 @@ Template.wide.rendered = () ->
 
 
 Meteor.startup ->
-  famous.core.Engine.setOptions({appMode: false})
+  famous?.core.Engine.setOptions({appMode: false})
 
 
 addScroller = (famx) ->
