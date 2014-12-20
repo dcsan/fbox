@@ -12,7 +12,6 @@ Meteor.startup ->
     @render "top",
 
   Router.route "/fambox", ->
-    layoutTemplate: "main"
     @render "fambox",
 
   Router.route "/listy", ->
@@ -21,5 +20,7 @@ Meteor.startup ->
 
 
   Router.route "/wide", ->
-    layoutTemplate: "main"
-    @render "wide",
+    @render "wide"
+
+  Router.route "/flex1", ->
+    @render "flex1"

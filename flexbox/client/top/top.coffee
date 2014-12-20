@@ -3,6 +3,8 @@ Template.top.helpers
     obj = [
       { name: 'fambox' }
       { name: 'listy'}
+      { name: 'wide'}
+      { name: 'flex1'}
     ]
 
     for item in obj
