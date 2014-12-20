@@ -41,6 +41,7 @@ mongo@1.0.10
 mquandalle:jade@0.4.1
 observe-sequence@1.0.4
 ordered-dict@1.0.2
+raix:famono@0.9.23
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4

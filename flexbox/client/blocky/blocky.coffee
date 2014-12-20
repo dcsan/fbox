@@ -1,3 +1,8 @@
+# TODO - body.onresize events to reorient/redraw the slider
+# window.addEventListener("resize", myFunction);
+# and remove on leaving
+
+
 Template.blocky.rendered = () ->
   console.log("blocky.rendered")
 
@@ -31,3 +36,7 @@ Template.blocky.rendered = () ->
   console.log(opts)
 
   $('#carousel').slick(opts)
+
+
+Template.blocky.destroyed = () ->
+  console.log("blocky.destroyed")
