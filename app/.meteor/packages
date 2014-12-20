@@ -10,6 +10,7 @@ coffeescript
 stylus
 
 mquandalle:jade
-raix:famono
 iron:router
+
+raix:famono
 gadicohen:famous-views
