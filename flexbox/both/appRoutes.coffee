@@ -9,10 +9,10 @@ Meteor.startup ->
 
   Router.route "/", ->
     name: "top"
-    @render "top",
+    @render "top"
 
   Router.route "/fambox", ->
-    @render "fambox",
+    @render "fambox"
 
   Router.route "/listy", ->
     name: "listy"

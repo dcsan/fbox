@@ -1,0 +1,8 @@
+template(name='top')
+  h1 MockFlow Top
+  ol
+    each MockData
+      li
+        a(href="/mocks/{{title}}") {{title}} | 
+        a(href=editUrl) edit
+
