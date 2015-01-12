@@ -1,8 +1,18 @@
 template(name='top')
   h1 MockFlow Top
-  ol
-    each MockData
-      li
-        a(href="/mocks/{{title}}") {{title}} | 
-        a(href=editUrl) edit
 
+  h2
+    a(href="/mocks/deck") deck
+
+  h2
+    a(href="/mocks/lessonList") lessonList
+
+  h2
+    a(href="/mocks/wow-start") wow-start
+
+  each MockData
+    .mockLine
+      a(href=editUrl)
+        button.mockButton.edit edit
+      a(href="/mocks/{{title}}")
+        button.mockButton {{title}}

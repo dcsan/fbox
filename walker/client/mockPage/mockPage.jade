@@ -1,7 +1,11 @@
 template(name="mockPage")
   a(href=mock.next)
-    img.mock(src=mock.img)
+    img.mockImg(src=mock.img)
 
   a(href="/")#navBar
 
-  
+  #title {{mock.title}}
+
+  .info
+    a(href=mock.editUrl target="_new")
+      .editButton edit

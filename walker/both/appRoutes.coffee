@@ -15,6 +15,14 @@ Meteor.startup ->
           MockData: MockData
         }
 
+  Router.route "/top", ->
+    name: "top"
+    @render "top",
+      data: ->
+        return {
+          MockData: MockData
+        }
+
   Router.route "/mocks/:page", ->
     @render "mockPage",
 
@@ -22,19 +30,18 @@ Meteor.startup ->
         # mock = MockData[@params.page]
         page = @params.page
         mock = _.find(MockData, (elem) ->
-          console.log("match", elem, page)
           return elem.title == page
         )
 
         unless mock
-          console.warn("no mock for:", @params.page)
+          console.warn("match:", page)
 
-        console.log("mock:", mock)
-        return {
+        blob = {
           page: @params.page
           mock: mock
         }
-
+        console.log("blob", blob)
+        return blob
 
   # Router.route "/deck", ->
   #   @render "deck"
