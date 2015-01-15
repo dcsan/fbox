@@ -30,6 +30,11 @@ if Meteor.isClient
     }
 
 
+    {
+      title: "lessonList-collapsible"
+      src: "1fAm19uv-OTWvCSOwi4rTUA-hha6wWOdovCRvXR9oKko"
+      next: "/mocks/lessonPage01"
+    }
 
     # quiz game
     {
@@ -102,7 +107,7 @@ if Meteor.isClient
       mock.img = mock.src
     else
       mock.editUrl = prefix + mock.src + "/edit"
-      mock.img = prefix + mock.src + "/pub?w=250&h=445"
+      mock.img = prefix + mock.src + "/pub?w=250"
 
     unless mock.next
       nextMock = MockData[idx+1]  # each one points forward by default
