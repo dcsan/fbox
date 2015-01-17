@@ -1,6 +1,9 @@
 globit = (name, val) ->
   window[name] = val
 
+clog = (m, v) ->
+  v ?= ""
+  console.log(m, v)
 
 Template.board.rendered = () ->
   console.log("board rendered")
@@ -10,7 +13,10 @@ Template.board.rendered = () ->
   #   svg: svg
   # }
 
-  snap = Snap(500, 500)
+  w = window.innerWidth
+  h = window.innerWidth
+
+  snap = Snap(w, h)
 
   svg = {}
 
@@ -30,17 +36,19 @@ Template.board.rendered = () ->
 introAnim = (svg) ->
   window.svg = svg
 
-  s1 = svg.root.select("#s2")
-  s1.attr({
-    
-  })
-
-
-  svg.s1 = s1
-
-  s1.animate {
+  anim = {
     height:150
     width: 150
-    fill: "#961726"
-  }, 1000
+    fill: "#ff0000"
+  }
+
+  TILECOUNT = 8
+  _.each [1..TILECOUNT], (c) ->
+    tag = "#s" + c
+    hue = (360/TILECOUNT) * c
+    anim.fill = Snap.hsl(hue, 100, 50)
+    clog(tag)
+    svg.root.select(tag).animate(anim, 3000)
+
+  svg.s1 = s1
 

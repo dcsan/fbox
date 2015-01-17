@@ -25,7 +25,7 @@ Meteor.startup ->
 
 
   # specific routes go before the catch-all
-  Router.route "/mocks/board", ->
+  Router.route "/boardAnim", ->
     @render "board",
       data: ->
         mock = {
