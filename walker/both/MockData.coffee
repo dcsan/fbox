@@ -117,7 +117,7 @@ if Meteor.isClient
 
   _.each MockData, (mock, idx) ->
     prefix = "https://docs.google.com/a/biz.pikkle.com/drawings/d/"
-    console.log("idx", idx)
+    # console.log("idx", idx)
     prev = mock
     mock.cname = mock.title + "-#{idx}"
     if mock.src[0] == "/"
@@ -130,4 +130,4 @@ if Meteor.isClient
       nextMock = MockData[idx+1]  # each one points forward by default
       mock.next = nextMock.title if nextMock
 
-  console.log MockData
+  # console.log MockData

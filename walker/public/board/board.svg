@@ -4,7 +4,7 @@
     <title>board</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="board" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g sketch:type="MSArtboardGroup">
             <path d="M124.5,108.5 L176.5,97.5" id="Line" stroke="#000000" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
             <path d="M232.5,97.5 L341.5,103.5" id="Line-2" stroke="#000000" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
