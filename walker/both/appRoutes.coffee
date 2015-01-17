@@ -23,6 +23,16 @@ Meteor.startup ->
           MockData: MockData
         }
 
+
+  # specific routes go before the catch-all
+  Router.route "/mocks/board", ->
+    @render "board",
+      data: ->
+        mock = {
+          
+        }
+
+
   Router.route "/mocks/:page", ->
     @render "mockPage",
 

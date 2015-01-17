@@ -8,6 +8,11 @@ if Meteor.isClient
     }
 
     {
+      title: "deck"
+      src: "1c2UOdVfTdVQmG0YpG8lAyySSOa-0bWu5wl_8Ybk-sf4"
+    }
+
+    {
       title: "lessonList"
       src: "/mockart/lessonList.png"
       type: "local"  # not google
@@ -29,14 +34,26 @@ if Meteor.isClient
       next: "/top"
     }
 
-
     {
       title: "lessonList-collapsible"
       src: "1fAm19uv-OTWvCSOwi4rTUA-hha6wWOdovCRvXR9oKko"
       next: "/mocks/lessonPage01"
     }
 
-    # quiz game
+    #------- board game
+    {
+        title: "board-quiz"
+        src: "/board/board.svg"
+    }
+
+    {
+        title: "board-question"
+        src: "/board/question.svg"
+        next: "board-quiz"
+    }
+
+
+    #------- quiz game
     {
         title: "wow-start"
         src: "1_wjhGJAwcdP7f1XWMNoEau9sdwTVaM1RXV-EKBPWRwQ"
@@ -103,7 +120,7 @@ if Meteor.isClient
     console.log("idx", idx)
     prev = mock
     mock.cname = mock.title + "-#{idx}"
-    if mock.type == "local"
+    if mock.src[0] == "/"
       mock.img = mock.src
     else
       mock.editUrl = prefix + mock.src + "/edit"
