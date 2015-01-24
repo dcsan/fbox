@@ -685,10 +685,40 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/dc/dev/shumi/fbox"
+		"/Users/dc/dev/shumi/fbox",
+		"/Users/dc/dev/shumi/fbox/walker",
+		"/Users/dc/dev/shumi/fbox/walker/both",
+		"/Users/dc/dev/shumi/fbox/walker/client",
+		"/Users/dc/dev/shumi/fbox/walker/client/board",
+		"/Users/dc/dev/shumi/fbox/walker/client/board/svg",
+		"/Users/dc/dev/shumi/fbox/walker/client/top"
 	],
 	"file_history":
 	[
+		"/Users/dc/dev/shumi/fbox/walker/client/board/board.jade",
+		"/Users/dc/dev/shumi/fbox/famous-views/client/top/top.jade",
+		"/Users/dc/dev/shumi/fbox/walker/client/board/board.coffee",
+		"/Users/dc/dev/shumi/fbox/walker/public/board/board.svg",
+		"/Users/dc/dev/shumi/fbox/walker/client/top/top.jade",
+		"/Users/dc/dev/shumi/fbox/walker/both/appRoutes.coffee",
+		"/Users/dc/dev/shumi/fbox/famous-views/both/appRoutes.coffee",
+		"/Users/dc/dev/shumi/fbox/.git/hooks/applypatch-msg.sample",
+		"/Users/dc/dev/shumi/fbox/.git/objects/03/a9bc246f3c90a32cdaf8d1612c6b7aa37fcb4a",
+		"/Users/dc/dev/shumi/fbox/famous-views/.meteor/local/build/programs/server/packages/callback-hook.js.map",
+		"/Users/dc/dev/shumi/fbox/famous-views/.meteor/.famono-repos/famous/examples/inputs/GenericSync/withOptions.html",
+		"/Users/dc/dev/shumi/fbox/.git/HEAD",
+		"/Users/dc/dev/shumi/fbox/walker/client/board/svg/boardSvg.html",
+		"/Users/dc/dev/shumi/fbox/walker/both/MockData.coffee",
+		"/Users/dc/dev/shumi/fbox/flexbox/client/layouts/meta.jade",
+		"/Users/dc/dev/shumi/fbox/walker/client/board/svg/board.html",
+		"/Users/dc/dev/shumi/fbox/walker/client/mockPage/mockPage.styl",
+		"/Users/dc/dev/shumi/fbox/walker/client/mockPage/mockPage.jade",
+		"/Users/dc/dev/shumi/fbox/walker/client/shared/navbar.jade",
+		"/Users/dc/dev/shumi/fbox/walker/client/lib/vendor/svg.import.js",
+		"/Users/dc/dev/shumi/fbox/walker/client/lib/vendor/svg.parser.js",
+		"/Users/dc/dev/shumi/fbox/famous-views/.meteor/local/build/programs/server/npm/webapp/node_modules/connect/lib/middleware/methodOverride.js",
+		"/Users/dc/dev/shumi/fbox/.git/refs/heads/master",
+		"/Users/dc/dev/shumi/fbox/walker/client/lib/vendor/svg.js",
 		"/Users/dc/dev/shumi/redes/app/packages/komik/client/komik/editor/komikEdit.css",
 		"/Users/dc/dev/shumi/redes/app/packages/mpg/client/settings/settingsLang.coffee",
 		"/Users/dc/dev/shumi/redes/app/packages/mpg/client/settings/settings.jade",
@@ -792,35 +822,11 @@
 		"/Users/dc/dev/shumi/redes/app/packages/magnets/client/views/magnetsView.coffee",
 		"/Users/dc/dev/shumi/redes/app/packages/magnets/client/views/magnetsView.jade",
 		"/Users/dc/dev/shumi/redes/app/packages/mpg/client/settings/settingsChange.jade",
-		"/Users/dc/dev/shumi/redes/app/packages/mpg/client/settings/settingsChange.coffee",
-		"/Users/dc/dev/shumi/redes/app/packages/layouts/styles/shared.styl",
-		"/Users/dc/dev/shumi/redes/builds/android/project/assets/www/application/packages/dcsan_reactive-ace/vendor/ace/src/theme-ambiance.js",
-		"/Users/dc/dev/shumi/redes/app/packages/mapx/lib/collections/Quests.coffee",
-		"/Users/dc/dev/shumi/redes/test/setTimeout.coffee",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/client/cards/gameCard.jade",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/client/cards/gameCardList.jade",
-		"/Users/dc/dev/shumi/redes/app/packages/xox/collections/questions.coffee",
-		"/Users/dc/dev/shumi/redes/app/packages/mapx/assets/quests.yml",
-		"/Users/dc/dev/shumi/redes/dumps/latest/Quests.yml",
-		"/Users/dc/dev/shumi/redes/app/.meteor/platforms",
-		"/Users/dc/dev/shumi/redes/app/packages/mpg/client/preLogin/preLogin.coffee",
-		"/Users/dc/dev/shumi/redes/bin/deploy-one.sh",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/client/deck/deckPopup.jade",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/client/deck/deckPopup.coffee",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/client/deck/deckPopup.styl",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/client/popup/popupCard.styl",
-		"/Users/dc/dev/shumi/redes/app/packages/dcsan:deck/both/lib/UserDeck.coffee",
-		"/Users/dc/dev/shumi/redes/app/packages/magnets/client/views/magnetsView.styl",
-		"/Users/dc/dev/shumi/redes/app/packages/magnets/server/magnetsServer.coffee",
-		"/Users/dc/dev/shumi/redes/app/packages/magnets/lib/MagnetsDeck.coffee",
-		"/Users/dc/dev/shumi/redes/dumps/latest/MagData.yml",
-		"/Users/dc/dev/shumi/redes/builds/android/project/assets/www/application/packages/dcsan_reactive-ace/vendor/ace/src/mode-abap.js",
-		"/Users/dc/dev/shumi/redes/app/packages/komik/client/komik/layouts/KomikEditorLayout.jade",
-		"/Users/dc/dev/shumi/redes/bin/dump-local-komiks.sh"
+		"/Users/dc/dev/shumi/redes/app/packages/mpg/client/settings/settingsChange.coffee"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -962,6 +968,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"60px",
 			"history",
 			"UserCards",
 			"blank",
@@ -1088,8 +1095,7 @@
 			".hot",
 			"intercomMove",
 			"onAfterAc",
-			"everyPage",
-			"page"
+			"everyPage"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1290,6 +1296,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"top",
+				"famous-views/client/top/top.jade"
+			],
+			[
+				"mock",
+				"walker/both/MockData.coffee"
+			],
+			[
+				"mockd",
+				"walker/both/MockData.coffee"
+			],
 			[
 				"komi",
 				"app/packages/komik/client/komik/editor/komikEdit.css"
@@ -1789,18 +1807,6 @@
 			[
 				"buttons",
 				"app/packages/layouts/styles/buttons.styl"
-			],
-			[
-				"userdec",
-				"app/packages/dcsan:deck/both/lib/UserDeck.coffee"
-			],
-			[
-				"user",
-				"app/packages/dcsan:deck/both/lib/UserDeck.coffee"
-			],
-			[
-				"topic",
-				"latest/Topics.yml"
 			]
 		],
 		"width": 0.0
@@ -1812,7 +1818,7 @@
 		[
 			[
 				"",
-				"~/dev/shumi/redes/docs/redes.sublime-project"
+				"~/dev/shumi/fbox/docs/fbox.sublime-project"
 			]
 		],
 		"width": 380.0
