@@ -1,5 +1,49 @@
+.widget {
+  opacity 0.1   // initial hide
+  margin-top 10px
+  margin-bottom 10px
+  border-bottom 1px dotted #ccc
+}
+
+.inset {
+  padding-left 10px
+  padding-right 10px
+}
+
 .headline {
   font-family 'Oswald'
   font-size 3rem
+  border 4px solid black
 }
 
+.caption {
+  font-size 2rem
+}
+
+.wideImage {
+  width 100%
+}
+
+
+.thinking {
+  .thought {
+    font-size 2rem
+    font-style bold
+  }
+  .afterthought {
+    font-size 2rem
+  }
+}
+
+.shout {
+  font-family 'Mouse Memoirs'
+  font-size 3rem
+}
+
+
+@media (min-width: 992px) {
+  .wideImage {
+    width 50%
+  }
+  // html { font-size: 120%; } 
+}

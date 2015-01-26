@@ -1,10 +1,18 @@
 # http://meteor.github.io/blaze/docs.html#ui_renderwithdata
 
+FRAME_DELAY=1000
+SCROLL_SPEED=200
+
 Template.story.rendered = () ->
-  console.log("created")
+  console.log("rendered", this.data)
   nextFrame(0)
+  startAnim(this.data)
 
 curFrame = 0
+pages = {}
+
+startAnim = (data) ->
+  pages = data.pages
 
 nextFrame = (frameNum) ->
 
@@ -13,11 +21,15 @@ nextFrame = (frameNum) ->
   else
     curFrame = curFrame + 1
 
-  frame = frameData[curFrame]
-  return unless frame  # last frame
+  page = pages[curFrame]
+  return unless page  # last frame
 
   parent = document.getElementById('stream')
-  template = Template[frame.template]
-  output = UI.renderWithData(template, frame, parent)
+  template = Template[page.page]
+  output = UI.renderWithData(template, page, parent)
+
+  $("#" + page.cname)
+    .velocity("scroll", { duration: 100, easing: "spring" })
+    .velocity({ opacity: 1 });
   
-  setTimeout(nextFrame, 1000)
+  setTimeout(nextFrame, FRAME_DELAY)

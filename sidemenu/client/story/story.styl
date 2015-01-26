@@ -1,19 +1,27 @@
 #inputBox {
-  position absolute
-  bottom 20px  
-  right 20px
-  left 20px    
+  position fixed
+  bottom 10px
+  right 10px
+  left 10px    
 }
 
-@media (min-width: 992px) {
 
+#stream {
+  position relative
+  top 70px
+  // bottom 80px
+  right 0px
+  // border 1px solid red
+  left 0px
+  padding-bottom 80px
+}
+
+
+@media (min-width: 992px) {
   #inputBox {
     left 320px
   }
-
-}
-
-#stream {
-  position absolute
-  bottom 80px
+  #stream {
+    // left 10px
+  }
 }
