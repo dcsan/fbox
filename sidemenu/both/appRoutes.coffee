@@ -32,43 +32,38 @@ Meteor.startup ->
   #   @render "chat"
 
 
-  Router.route "/story/:chapter/:page", ->
-    @render "story",
+  Router.route "/story/:chapter/:page",
 
-      waitOn: ->
-        debugger
-        console.log("waitOn")
-        query = {
-          chapter: @params.chapter
-          page: @params.page
-        }
-        console.log("sub", query)
-        res = [
-          Meteor.subscribe("PageData", query)
-        ]
-        return res
+    waitOn: ->
+      query = {
+        chapter: @params.chapter
+        page: @params.page
+      }
+      console.log("sub", query)
+      return Meteor.subscribe("PageData", query)
 
-      # name: "story"
-      # @render "story",
+    # name: "story"
+    # @render "story",
 
-      data: ->
-        return unless @ready()
-        console.log("data")
-        query = {
-          chapter: @params.chapter
-          page: @params.page
-        }
-        pages = PageData.find(query).fetch()
-        console.log(query, pages)
+    data: ->
+      return unless @ready()
+      console.log("data")
+      query = {
+        chapter: @params.chapter
+        page: @params.page
+      }
+      sort = {cname: 1}
+      pages = PageData.find(query, {}, sort).fetch()
+      console.log(query, pages)
 
-        blob = {
-          pages: pages
-          page: @params.page
-          chapter: @params.chapter
-        }
-        console.log("pages", pages )
-        return blob
+      blob = {
+        pages: pages
+        page: @params.page
+        chapter: @params.chapter
+      }
+      console.log("pages", pages )
+      return blob
 
-      # action: ->
-      #   @render  "story"
+    action: ->
+      @render  "story"
 

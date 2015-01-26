@@ -3,33 +3,31 @@
 FRAME_DELAY=1000
 SCROLL_SPEED=200
 
+gdata = false
+curFrame = -1
+
 Template.story.rendered = () ->
-  console.log("rendered", this.data)
-  nextFrame(0)
   startAnim(this.data)
 
-curFrame = 0
-pages = {}
-
 startAnim = (data) ->
-  pages = data.pages
+  console.log('startAnim', data)
+  gdata = data
+  curFrame = 0  # so +1 = 0
+  nextFrame()
 
-nextFrame = (frameNum) ->
+nextFrame = () ->
 
-  if frameNum
-    curFrame = frameNum
-  else
-    curFrame = curFrame + 1
-
-  page = pages[curFrame]
+  # debugger
+  page = gdata.pages[curFrame]
   return unless page  # last frame
 
   parent = document.getElementById('stream')
-  template = Template[page.page]
+  template = Template[page.template]
   output = UI.renderWithData(template, page, parent)
 
   $("#" + page.cname)
-    .velocity("scroll", { duration: 100, easing: "spring" })
+    .velocity("scroll", { duration: SCROLL_SPEED, easing: "spring" })
     .velocity({ opacity: 1 });
-  
+
+  curFrame = curFrame + 1
   setTimeout(nextFrame, FRAME_DELAY)

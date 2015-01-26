@@ -4,8 +4,9 @@
 raw = [
 
   {
-    # item 0 not shown
+    template: 'placeholder0'
   }
+
 
   {
     page: "train", chapter: "lost"
