@@ -1,13 +1,18 @@
 @sideMenuItems = [
 
   {
-    href: "#"
-    label: "Story"
+    label: "Home"
+    href: "/home"
   }
 
   {
-    href: "#"
-    label: "Topics"
+    label: "Story"
+    href: "/story/lost/train"
+  }
+
+  {
+    label: "Game test"
+    href: "/game/start"
   }
 
   {
