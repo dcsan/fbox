@@ -37,7 +37,7 @@ Meteor.startup ->
     waitOn: ->
       query = {
         chapter: @params.chapter
-        page: @params.page
+        # page: @params.page
       }
       console.log("sub", query)
       return Meteor.subscribe("PageData", query)
@@ -50,9 +50,11 @@ Meteor.startup ->
       console.log("data")
       query = {
         chapter: @params.chapter
-        page: @params.page
+        # page: @params.page
       }
-      sort = {cname: 1}
+      sort = {
+        idx: 1
+      }
       pages = PageData.find(query, {}, sort).fetch()
       console.log(query, pages)
 

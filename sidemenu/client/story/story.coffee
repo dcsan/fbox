@@ -3,31 +3,41 @@
 FRAME_DELAY=1000
 SCROLL_SPEED=200
 
+devspeed = 1
+
 gdata = false
-curFrame = -1
+curPanel = -1
 
 Template.story.rendered = () ->
+  console.log("rendered")
   startAnim(this.data)
 
 startAnim = (data) ->
-  console.log('startAnim', data)
+  console.log('startAnim page', data.page)
   gdata = data
-  curFrame = 0  # so +1 = 0
-  nextFrame()
+  # router preloads the whole chapter, we just need one of data
+  gdata.page = PageData.findOne({page: gdata.page})
+  gdata.panels = gdata.page.panels
+  console.log('panels', gdata.panels)
+  curPanel = 0  # so +1 = 0
+  nextPanel()
 
-nextFrame = () ->
+nextPanel = () ->
 
   # debugger
-  page = gdata.pages[curFrame]
-  return unless page  # last frame
+  panel = gdata.panels[curPanel]
+  return unless panel  # last frame
 
   parent = document.getElementById('stream')
-  template = Template[page.template]
-  output = UI.renderWithData(template, page, parent)
+  template = Template[panel.template]
+  output = UI.renderWithData(template, panel, parent)
 
-  $("#" + page.cname)
-    .velocity("scroll", { duration: SCROLL_SPEED, easing: "spring" })
-    .velocity({ opacity: 1 });
+  $("#" + panel.cname)
+    .velocity("scroll", {
+      duration: SCROLL_SPEED/devspeed, easing: "spring"
+    })
+    .velocity({ opacity: 1 })
+    .addClass(panel.animation)
 
-  curFrame = curFrame + 1
-  setTimeout(nextFrame, FRAME_DELAY)
+  curPanel = curPanel + 1
+  setTimeout(nextPanel, FRAME_DELAY/devspeed)
