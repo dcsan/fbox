@@ -39,15 +39,15 @@ Meteor.startup ->
         chapter: @params.chapter
         # page: @params.page
       }
-      console.log("sub", query)
+      console.log("IR | waitOn query", query)
       return Meteor.subscribe("PageData", query)
 
     # name: "story"
     # @render "story",
 
     data: ->
+      console.log("IR | data check")
       return unless @ready()
-      console.log("data")
       query = {
         chapter: @params.chapter
         # page: @params.page
@@ -56,16 +56,16 @@ Meteor.startup ->
         idx: 1
       }
       pages = PageData.find(query, {}, sort).fetch()
-      console.log(query, pages)
 
       blob = {
         pages: pages
         page: @params.page
         chapter: @params.chapter
       }
-      console.log("pages", pages )
+      console.log("IR | data ready", query, pages)
       return blob
 
     action: ->
+      console.log("IR | action, data:", @data() )
       @render  "story"
 
