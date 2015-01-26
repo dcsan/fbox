@@ -687,10 +687,9 @@
 	[
 		"/Users/dc/dev/shumi/fbox",
 		"/Users/dc/dev/shumi/fbox/walker",
-		"/Users/dc/dev/shumi/fbox/walker/both",
 		"/Users/dc/dev/shumi/fbox/walker/client",
-		"/Users/dc/dev/shumi/fbox/walker/client/board",
 		"/Users/dc/dev/shumi/fbox/walker/client/board/svg",
+		"/Users/dc/dev/shumi/fbox/walker/client/layouts",
 		"/Users/dc/dev/shumi/fbox/walker/client/top"
 	],
 	"file_history":

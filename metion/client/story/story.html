@@ -1,0 +1,25 @@
+<template name="story">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="contacts" text="Contacts"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Details</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="_contactsEdit" data-id="{{contact._id}}">Edit</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding contact-detail"}}
+
+      <h2>item</h2>
+      <h2>item</h2>
+      <h2>item</h2>
+      <h2>item</h2>
+
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>

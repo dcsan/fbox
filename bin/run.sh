@@ -1,0 +1,1 @@
+cd sidemenu && meteor --settings config/config.json

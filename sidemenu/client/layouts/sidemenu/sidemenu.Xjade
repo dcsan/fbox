@@ -1,0 +1,17 @@
+template(name='sidemenu')
+  #wrapper
+    #sidebar-wrapper
+      ul.sidebar-nav
+        li.sidebar-brand
+          a(href='#')
+            | chatU
+            each sideMenuItems
+              li
+                a(href=href) {{label}}
+
+    #page-content-wrapper
+      .container-fluid
+        .row
+          .col-lg-12
+            a#menu-toggle.btn.btn-default(href='#menu-toggle') menu
+            +yield

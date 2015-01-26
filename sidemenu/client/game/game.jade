@@ -1,0 +1,37 @@
+template(name='game')
+  .title {{scene.name}}
+  #content
+    img(src=scene.image)
+    span#alert 
+    iframe#iframeX(name="iframeX")
+
+  h3 {{scene.description}}
+
+  input(type="text" value="" id="inputbox")
+  input(type="submit" value="GO")
+
+  .inventory
+    h3 inventory
+    ol
+    each playerItems
+      li {{name}}
+
+  hr
+
+  h3 hints
+  ul
+  each scene.actions
+    li
+      a(href=href) {{verb}} {{noun}}
+
+  
+
+  hr
+  .debug
+    p debug
+    p you said:
+      span(id="yousaid") ..
+    p [ {{scene.image}} ]
+
+  a(href="/") restart
+    
