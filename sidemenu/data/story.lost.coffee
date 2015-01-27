@@ -175,6 +175,13 @@ stories.lost = [
       }
 
       {
+        template: "chatline"
+        usericon: "/assets/lost/avatars/inspector.png"
+        text: "hey, show me your ticket"
+      }
+
+
+      {
         template: "shouting"
         text: "Where's your ticket?"
         iterations: 2

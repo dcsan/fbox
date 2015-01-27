@@ -1,0 +1,6 @@
+template(name='chatline')
+  .widget.animated(
+    id=cname style="-webkit-animation-delay: {{delay}}s; -webkit-animation-iteration-count: {{iterations}};"
+  )
+    img.avatar(src=usericon)
+    .chatline {{text}}

@@ -2,7 +2,7 @@
 
 FRAME_DELAY=1000
 SCROLL_SPEED=200
-devspeed = 10     # higher is faster
+devspeed = 3     # higher is faster
 
 gdata = false
 curPanel = -1
