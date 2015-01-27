@@ -1,14 +1,21 @@
 @StoryEngine = {}
+devspeed = 10     # higher is faster
 
 FRAME_DELAY=1000
 SCROLL_SPEED=200
-devspeed = 1     # higher is faster
 
 gdata = false
 curPanel = 0
+lastPage = false
+
+StoryEngine.setPage = (page) ->
+  unless page == lastPage
+    lastPage = page
+    StoryEngine.startAnim()
+
 
 StoryEngine.startAnim = (data) ->
-  console.log('startAnim page, data', data.page, data)
+  console.log('startAnim page, data', data, data.page)
   gdata = data
   # router preloads the whole chapter, we just need one of data
   gdata.page = PageData.findOne({page: gdata.page})
@@ -19,15 +26,20 @@ StoryEngine.startAnim = (data) ->
 
 nextPanel = () ->
   panel = gdata.panels[curPanel]
+  console.log("nextPanel [#{curPanel}]", panel)
   return unless panel  # last frame
+  StoryEngine.addPanel(panel)
 
+
+StoryEngine.addPanel = (panel) ->
+  # debugger
   parent = document.getElementById('stream')
-  widget = Template[panel.widget]
-  panel.cname = Meteor.uuid()
+  widget = Template[panel.widget or 'caption']
+  panel.uuid = Meteor.uuid()
   output = UI.renderWithData(widget, panel, parent)
-  console.log("panel", panel.text, panel)
+  console.log("panel #{curPanel}: #{panel.cname}", panel.text)
 
-  $("#" + panel.cname)
+  $("#" + panel.uuid)
     .velocity("scroll", {
       duration: SCROLL_SPEED/devspeed, easing: "spring"
     })
@@ -35,7 +47,5 @@ nextPanel = () ->
     .addClass(panel.animation)
 
   curPanel = curPanel + 1
-  setTimeout(nextPanel, FRAME_DELAY/devspeed)
-
-
-# StoryEngine.goPage = (pageName) ->
+  unless panel.pause
+    setTimeout(nextPanel, FRAME_DELAY/devspeed)

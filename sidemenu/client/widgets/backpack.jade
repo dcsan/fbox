@@ -1,7 +1,7 @@
-template(name='chatline')
+template(name='backpack')
   .widget.animated(
     id=uuid style="-webkit-animation-delay: {{delay}}s; -webkit-animation-iteration-count: {{iterations}};"
   )
-    .chatline 
-      .text {{text}}
-      img.avatar(src=usericon)
+    p pick an item:
+    each items
+      img.packitem(src=icon data-cname=cname)

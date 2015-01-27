@@ -5,22 +5,6 @@ stories.lost = [
 
   {
     chapter: "lost"
-    page: "start"
-    panels: [
-      {
-        widget: "headline"
-        text: "Lost in America"
-      }
-
-      {
-        widget: "caption"
-        text: "It had been a good two weeks"
-      }
-    ]
-  }
-
-  {
-    chapter: "lost"
     page: "train"
     panels: [
 
@@ -53,11 +37,6 @@ stories.lost = [
       {
         widget: "caption"
         text: "How many hours had you slept?"
-      }
-
-      {
-        widget: "caption"
-        text: "You could be anywhere, rolling through middle America."
       }
 
       {

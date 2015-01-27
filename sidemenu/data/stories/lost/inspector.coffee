@@ -37,8 +37,8 @@ stories.inspector = [
         widget: "twoChoice"
         text1: "Ignore him."
         url1: "walkAway"
-        text2: "go back to sleep"
-        url2: "sleepMore"
+        text2: "look for ticket"
+        url2: "lookTicket"
         pause: true
       }
 

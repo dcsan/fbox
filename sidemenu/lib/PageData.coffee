@@ -23,6 +23,8 @@ Meteor.startup ->
       for panel, idx in page.panels
         panel.idx = idx
         panel.cname = "#{page.page}_#{idx}"
+        unless panel.widget
+          panel.widget = "caption"
       PageData.insert(page)
 
     # publish

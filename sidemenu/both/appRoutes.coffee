@@ -4,7 +4,7 @@ Meteor.startup ->
 
     Router.configure
       # notFoundTemplate: 'NotFound',
-      layoutwidget: "sidemenu"
+      layoutTemplate: "sidemenu"
       # loadingTemplate: 'loading'
       # onBeforeAction: "loading"
 
@@ -46,6 +46,9 @@ Meteor.startup ->
     Router.route "/about", ->
       @render "about"
 
+    Router.route "/tbc", ->
+      @render "tbc"
+
     Router.route "/story/:chapter/:page",
 
       waitOn: ->
@@ -83,5 +86,22 @@ Meteor.startup ->
         console.log("IR | action, data:", @data() )
         @render  "story"
         # needed for each page/URL as we dont get a render event
-        StoryEngine.startAnim(@data())
+        # that = this
+
+      # only called in same route instance
+      onRerun: ->
+        console.log("IR | reRun", @data() )
+        @next()
+
+      # FIXME
+      # need this to run just once, and after we have a DOM ready
+      # Template.rendered only called once - not when data changes
+      # redo with Deps??
+      onAfterAction: ->
+        return unless @ready()   # ugly hack
+        console.log("IR | after")
+        setTimeout =>
+          StoryEngine.startAnim(this.data() )
+        , 100
+        
 
