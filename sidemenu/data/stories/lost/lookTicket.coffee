@@ -42,6 +42,13 @@ stories.lookTicket = [
       }
 
       {
+        widget: "userInput"
+        hint: "talk to him. be smooth!"
+        prompt: "say something"
+        pause: true
+      }
+
+      {
         widget: "continue"
         text: "to be continued..."
         url: "/tbc"

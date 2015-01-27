@@ -42,11 +42,6 @@ stories.inspector = [
         pause: true
       }
 
-      {
-        widget: "userInput"
-        text: "talk to him. be smooth!"
-      }
-
     ]
   }
 

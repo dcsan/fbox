@@ -1,9 +1,8 @@
 handleInput = (msg) ->
+  StoryEngine.addPanel({
+    text: msg
+  })
   $("#inputBox").val("")
-  $("#yousaid").text(msg)
-  stuff = msg.split(" ")
-  verb = stuff[0]
-  noun = stuff[1]
 
   # actions = getActions(CGame.scene, verb, noun)
   # console.log("res:", actions)
