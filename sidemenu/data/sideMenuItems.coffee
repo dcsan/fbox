@@ -11,18 +11,18 @@
   }
 
   {
-    label: "Game test"
-    href: "/game/start"
+    label: "Friends"
+    href: "/friends"
   }
 
   {
-    href: "#"
-    label: "Dashboard"
-  }
-
-  {
-    href: "#"
     label: "About"
+    href: "/about"
   }
+
+  # {
+  #   label: "Game test"
+  #   href: "/game/start"
+  # }
 
 ]

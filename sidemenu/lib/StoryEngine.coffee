@@ -22,9 +22,10 @@ nextPanel = () ->
   return unless panel  # last frame
 
   parent = document.getElementById('stream')
-  template = Template[panel.template]
+  widget = Template[panel.widget]
   panel.cname = Meteor.uuid()
-  output = UI.renderWithData(template, panel, parent)
+  output = UI.renderWithData(widget, panel, parent)
+  console.log("panel", panel.text, panel)
 
   $("#" + panel.cname)
     .velocity("scroll", {

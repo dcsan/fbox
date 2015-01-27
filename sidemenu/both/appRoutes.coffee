@@ -4,7 +4,7 @@ Meteor.startup ->
 
     Router.configure
       # notFoundTemplate: 'NotFound',
-      layoutTemplate: "sidemenu"
+      layoutwidget: "sidemenu"
       # loadingTemplate: 'loading'
       # onBeforeAction: "loading"
 
@@ -40,6 +40,11 @@ Meteor.startup ->
     Router.route "/home", ->
       @render "home"
 
+    Router.route "/friends", ->
+      @render "friends"
+
+    Router.route "/about", ->
+      @render "about"
 
     Router.route "/story/:chapter/:page",
 

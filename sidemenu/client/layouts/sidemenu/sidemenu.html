@@ -1,8 +1,8 @@
 <template name='sidemenu'>
 
-    <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
+    <div id="sidemenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" >
       <a class="navmenu-brand visible-md visible-lg" href="#">ChatU</a>
-      <ul class="nav navmenu-nav">
+      <ul class="nav navmenu-nav" id='navItems'>
         {{#each sideMenuItems}}
         <li><a href="{{href}}">{{label}}</a></li>
         {{/each}}
