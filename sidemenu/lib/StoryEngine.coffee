@@ -2,10 +2,10 @@
 
 FRAME_DELAY=1000
 SCROLL_SPEED=200
-devspeed = 3     # higher is faster
+devspeed = 1     # higher is faster
 
 gdata = false
-curPanel = -1
+curPanel = 0
 
 StoryEngine.startAnim = (data) ->
   console.log('startAnim page, data', data.page, data)
@@ -35,3 +35,6 @@ nextPanel = () ->
 
   curPanel = curPanel + 1
   setTimeout(nextPanel, FRAME_DELAY/devspeed)
+
+
+# StoryEngine.goPage = (pageName) ->

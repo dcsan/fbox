@@ -180,7 +180,6 @@ stories.lost = [
         text: "hey, show me your ticket"
       }
 
-
       {
         template: "shouting"
         text: "Where's your ticket?"
@@ -188,10 +187,6 @@ stories.lost = [
         animation: "shake"
       }
 
-      {
-        template: "caption"
-        text: "Where's your ticket!"
-      }
       {
         template: "caption"
         text: "You need a ticket to be on this train you know."
@@ -204,6 +199,11 @@ stories.lost = [
         text2: "go back to sleep"
         url2: "sleepMore"
         pause: true
+      }
+
+      {
+        template: "userInput"
+        text: "talk to him. be smooth!"
       }
 
     ]
